@@ -56,3 +56,7 @@ temp/
 .cache/
 *.bak
 *.orig
+
+# Ignore backend env (ensure local .env files are not committed)
+backend/.env
+frontend/.env

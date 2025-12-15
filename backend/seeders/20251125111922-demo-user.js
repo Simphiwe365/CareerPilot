@@ -7,7 +7,8 @@ module.exports = {
       {
         name: 'Simphiwe Mbatha',
         email: 'simphiwe@example.com',
-        password: 'password123', // Replace with hashed password in production
+        // Do NOT store plaintext passwords in seeders. Use a hashed password or create user via migration scripts.
+        password: '$2b$10$XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
         createdAt: new Date(),
         updatedAt: new Date()
       }

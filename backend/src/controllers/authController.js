@@ -29,11 +29,12 @@ const register = async (req, res) => {
     });
 
     // Generate JWT token
-    const token = jwt.sign(
-      { id: user.id, email: user.email },
-      process.env.JWT_SECRET || 'your-secret-key',
-      { expiresIn: '7d' }
-    );
+    const jwtSecret = process.env.JWT_SECRET;
+    if (!jwtSecret) {
+      console.error('JWT secret not set in environment');
+      return res.status(500).json({ message: 'Server configuration error' });
+    }
+    const token = jwt.sign({ id: user.id, email: user.email }, jwtSecret, { expiresIn: '7d' });
 
     res.status(201).json({
       message: 'User registered successfully',
@@ -73,11 +74,12 @@ const login = async (req, res) => {
     }
 
     // Generate JWT token
-    const token = jwt.sign(
-      { id: user.id, email: user.email },
-      process.env.JWT_SECRET || 'your-secret-key',
-      { expiresIn: '7d' }
-    );
+    const jwtSecret = process.env.JWT_SECRET;
+    if (!jwtSecret) {
+      console.error('JWT secret not set in environment');
+      return res.status(500).json({ message: 'Server configuration error' });
+    }
+    const token = jwt.sign({ id: user.id, email: user.email }, jwtSecret, { expiresIn: '7d' });
 
     res.json({
       message: 'Login successful',

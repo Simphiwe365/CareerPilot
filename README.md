@@ -549,16 +549,6 @@ Contributions are welcome! Please follow these steps:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-
-## 👤 Author
-
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [your-profile](https://linkedin.com/in/your-profile)
-- Email: your.email@example.com
-
----
 
 ## 🙏 Acknowledgments
 
@@ -568,18 +558,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - TailwindCSS team
 - All open-source contributors
 
----
-
-## 📞 Support
-
-For support, email support@careerpilot.com or open an issue in this repository.
-
----
-
 <div align="center">
 
 **Built with ❤️ for helping people find their dream careers**
-
-⭐ Star this repo if you find it helpful!
 
 </div>

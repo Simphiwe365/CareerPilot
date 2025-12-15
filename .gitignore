@@ -60,3 +60,5 @@ temp/
 # Ignore backend env (ensure local .env files are not committed)
 backend/.env
 frontend/.env
+backend/.env.local
+frontend/.env.local

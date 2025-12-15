@@ -27,7 +27,6 @@
 - [API Documentation](#-api-documentation)
 - [Database Schema](#-database-schema)
 - [Development Roadmap](#-development-roadmap)
-- [Contributing](#-contributing)
 - [License](#-license)
 
 ---

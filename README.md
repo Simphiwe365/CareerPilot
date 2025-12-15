@@ -6,7 +6,9 @@
 ![Status](https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-**An intelligent full-stack platform that helps students and professionals discover suitable career paths through AI-powered analysis, personalized roadmaps, and weekly coaching.**
+CareerPilot
+
+CareerPilot is an intelligent full-stack platform that helps students and professionals discover suitable career paths through AI-powered analysis, personalized roadmaps, and weekly coaching. This project showcases my learning and progress in full-stack development, AI integration, database management, and secure authentication while building a complete, real-world application.
 
 [Features](#-features) • [Tech Stack](#-tech-stack) • [Getting Started](#-getting-started) • [API Docs](./docs/API_DOCS.md) • [Architecture](./docs/ARCHITECTURE.md)
 

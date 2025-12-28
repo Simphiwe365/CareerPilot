@@ -6,7 +6,9 @@
 ![Status](https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-**An intelligent full-stack platform that helps students and professionals discover suitable career paths through AI-powered analysis, personalized roadmaps, and weekly coaching.**
+CareerPilot
+
+CareerPilot is an intelligent full-stack platform that helps students and professionals discover suitable career paths through AI-powered analysis, personalized roadmaps, and weekly coaching. This project showcases my learning and progress in full-stack development, AI integration, database management, and secure authentication while building a complete, real-world application.
 
 [Features](#-features) • [Tech Stack](#-tech-stack) • [Getting Started](#-getting-started) • [API Docs](./docs/API_DOCS.md) • [Architecture](./docs/ARCHITECTURE.md)
 
@@ -27,7 +29,6 @@
 - [API Documentation](#-api-documentation)
 - [Database Schema](#-database-schema)
 - [Development Roadmap](#-development-roadmap)
-- [Contributing](#-contributing)
 - [License](#-license)
 
 ---
@@ -531,55 +532,13 @@ npm test
 npm run test:all
 ```
 
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-
-## 👤 Author
-
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [your-profile](https://linkedin.com/in/your-profile)
-- Email: your.email@example.com
-
----
-
-## 🙏 Acknowledgments
-
-- OpenAI for GPT API
-- Sequelize ORM team
-- React & Vite communities
-- TailwindCSS team
-- All open-source contributors
-
----
-
-## 📞 Support
-
-For support, email support@careerpilot.com or open an issue in this repository.
-
----
 
 <div align="center">
 
 **Built with ❤️ for helping people find their dream careers**
-
-⭐ Star this repo if you find it helpful!
 
 </div>

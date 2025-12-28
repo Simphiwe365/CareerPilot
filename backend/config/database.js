@@ -12,7 +12,18 @@ module.exports = {
   development: {
     username: process.env.DB_USER || 'postgres',
     // Password must come from environment variables - do NOT hardcode secrets here
-    password: process.env.DB_PASSWORD || null,
+    // Coerce to string when provided and fail early in development if missing
+    password: (() => {
+      const raw = process.env.DB_PASSWORD;
+      if (raw === undefined || raw === null || raw === '') {
+        if ((process.env.NODE_ENV || 'development') !== 'production') {
+          console.error('Missing DB_PASSWORD environment variable. Create backend/.env and set DB_PASSWORD.');
+          process.exit(1);
+        }
+        return undefined;
+      }
+      return String(raw);
+    })(),
     database: process.env.DB_NAME || 'careerpilot_db',
     host: process.env.DB_HOST || '127.0.0.1',
     port: process.env.DB_PORT ? Number(process.env.DB_PORT) : 5432,

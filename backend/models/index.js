@@ -6,7 +6,19 @@ const Sequelize = require('sequelize');
 const process = require('process');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-const config = require(__dirname + '/../config/config.json')[env];
+const configFile = require(__dirname + '/../config/config.json');
+const config = configFile[env];
+
+// If a DB password is provided via env, coerce to string to satisfy `pg`.
+if (process.env.DB_PASSWORD !== undefined && process.env.DB_PASSWORD !== null) {
+  config.password = String(process.env.DB_PASSWORD);
+}
+
+// Fail fast in development when password is missing to avoid confusing pg errors.
+if ((config.password === null || config.password === undefined || config.password === '') && env !== 'production') {
+  console.error('Missing DB password. Set `DB_PASSWORD` in backend/.env or your environment.');
+  process.exit(1);
+}
 const db = {};
 
 let sequelize;

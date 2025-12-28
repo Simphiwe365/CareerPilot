@@ -26,7 +26,7 @@ export default function LoginForm() {
       localStorage.setItem('user', JSON.stringify(response.data.user));
 
       // Redirect to dashboard
-      navigate('/');
+      navigate('/dashboard');
     } catch (err) {
       setError(err.response?.data?.message || 'Login failed. Please try again.');
     } finally {

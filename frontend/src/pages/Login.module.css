@@ -1,94 +1,94 @@
-.loginContainer {
-  /* Replace gradient with background image */
-  background: url('../assets/career.jpg') center center / cover no-repeat;
-  min-height: 100vh;
+/* Simple centered login card styles */
+.simpleContainer {
+  /* Make the auth container fixed so the page doesn't scroll */
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
   display: flex;
   align-items: center;
   justify-content: center;
+  background: url('../assets/career.jpg') center center / cover no-repeat;
+  padding: 40px 20px;
+  overflow: hidden;
 }
 
-.loginCard {
-  background: rgba(255, 255, 255, 0.8); /* 80% opacity */
-  border-radius: 1rem;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  padding: 2rem 2.5rem;
+.simpleCard {
   width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center children horizontally */
-}
-
-.loginTitle {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #020202;
-  margin-bottom: 1.5rem;
+  max-width: 420px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(2,6,23,0.12);
+  padding: 36px 28px;
   text-align: center;
+  /* ensure card fits within the fixed viewport */
+  max-height: calc(100vh - 80px);
+  overflow-y: auto; /* allow internal scroll if content exceeds card but hide scrollbar */
 }
 
+.simpleTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #0f172a;
+}
+
+.simpleSubtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 20px 0;
+}
+
+.simpleFooter {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* reuse form input/button classes used by LoginForm */
 .inputBox {
-  width: 90%; /* Slightly less than 100% for centering */
-  padding: 0.75rem 1rem;
-  margin-bottom: 1.25rem;
-  border: 1px solid #bae6fd;
-  border-radius: 0.75rem;
-  font-size: 1rem;
-  background: #898e91;
-  transition: border-color 0.2s;
-  margin-left: auto;
-  margin-right: auto; /* Center the input box itself */
-  text-align: left; /* Standard for input fields */
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border: 1px solid #e6eef9;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #f8fbff;
+  color: #0f172a;
+  box-sizing: border-box;
 }
 
-.inputBox:focus {
-  border-color: #06b6d4;
-  outline: none;
-  background: #898e91;
-}
+.inputBox::placeholder { color: #94a3b8; }
 
-/* Remove .inputBox::placeholder { text-align: center; } */
+.inputBox:focus { outline: none; border-color: #60a5fa; box-shadow: none; }
 
 .loginButton {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    background-color: #0a0a0a;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 0.75rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-.registerButton {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    background-color: #020202;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 0.75rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    margin-top: 0.5rem;
-}
-._inputBox_iwybw_51 {
   width: 100%;
-  padding: 0.75rem 1rem;
-  margin-bottom: 1.25rem;
-  border: 1px solid #bae6fd;
-  border-radius: 0.75rem;
-  font-size: 1rem;
-  background: #f0f9ff;
-  transition: border-color 0.2s;
-
-  /* Center the text and placeholder */
-  text-align: center;
+  padding: 12px 14px;
+  background: #0b1220;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-/* Optional: make sure placeholder text is centered consistently */
-._inputBox_iwybw_51::placeholder {
-  text-align: center;
+.registerButton {
+  width: 100%;
+  padding: 12px 14px;
+  background: transparent;
+  color: #0b1220;
+  font-size: 15px;
+  font-weight: 700;
+  border: 2px solid rgba(11,18,32,0.06);
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
 }
+
+@media (max-width: 600px) {
+  .simpleCard { padding: 24px; }
+}
+
+/* Hide scrollbar but keep scrolling functional inside the card */
+.simpleCard::-webkit-scrollbar { display: none; }
+.simpleCard { -ms-overflow-style: none; scrollbar-width: none; }

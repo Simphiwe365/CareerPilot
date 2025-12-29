@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import styles from '../../pages/Login.module.css';
 
@@ -34,13 +34,6 @@ export default function LoginForm() {
     }
   };
 
-  const handleRegister = (e) => {
-    e.preventDefault();
-    console.log('Register button clicked');
-    // Navigate to Register page
-    navigate('/register');
-  };
-
   return (
     <form onSubmit={handleLogin} style={{ width: '100%' }}>
       {error && (
@@ -67,14 +60,7 @@ export default function LoginForm() {
       <button type="submit" className={styles.loginButton} disabled={loading}>
         {loading ? 'Logging in...' : 'Login'}
       </button>
-      <Link to="/register" style={{ width: '100%' }}>
-        <button
-          type="button"
-          className={styles.registerButton}
-        >
-          Register
-        </button>
-      </Link>
+      {/* Register button intentionally removed — registration handled on separate page */}
     </form>
   );
 }

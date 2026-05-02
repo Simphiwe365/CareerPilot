@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "postgres",
-    "password": null,
+    "password": "your_local_db_password",
     "database": "careerpilot_db",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
-    "password": null,
+    "password": "your_local_db_password",
     "database": "careerpilot_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "postgres",
-    "password": null,
+    "password": "your_production_db_password",
     "database": "careerpilot_db",
     "host": "127.0.0.1",
     "dialect": "postgres"
